@@ -8,59 +8,62 @@
 <body data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
 
 
-  <header style="background-color: rgb(30, 34, 38); color: white">
-    <div class="container-fluid" style="height: 40px; display: flex">
-      <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
-      <p style="padding-top: 7px; margin-left: auto; margin-right: 10px">+491254644654</p>
-      <button type="button" class="btn btn-secondary" style="border-radius: 0">
-        <p>jetzt anrufen</p>
-      </button>
-    </div>
-  </header>
+<header style="background-color: rgb(30, 34, 38); color: white">
+  <div class="container-fluid" style="height: 40px; display: flex">
+    <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
+    <p style="padding-top: 7px; margin-left: auto; margin-right: 10px">+491254644654</p>
+    <button type="button" class="btn btn-secondary" style="border-radius: 0">
+      <p>jetzt anrufen</p>
+    </button>
+  </div>
+</header>
 
-  <nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}" *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CarMatch</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">ÜBER UNS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">KONTAKT</a>
-          </li>
-        </ul>
-      </div>
+<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
+     *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CarMatch</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">ÜBER UNS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">KONTAKT</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}" style="height: 90px" *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarNormal">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CarMatch</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarNormal">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarNormal">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">ÜBER UNS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">KONTAKT</a>
-          </li>
-        </ul>
-      </div>
+<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
+     style="height: 90px" *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"
+     id="navbarNormal">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CarMatch</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarNormal">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarNormal">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">ÜBER UNS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">KONTAKT</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <main>
 
@@ -68,13 +71,21 @@
     <img class="img-fluid" src="assets/Color%20logo%20-%20no%20background.png" alt="auto">
   </div>
 
-  <div style="margin-top: 400px" id="about">
-    <p>ÜBER UNS</p>
-  </div>
 
-  <div style="margin-top: 400px" id="contact">
-    <p>KONTAKT</p>
-  </div>
+  <section>
+    <div class="container-fluid" style="margin-top: 400px" id="about">
+      <hr>
+      <p>ÜBER UNS</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-fluid" style="margin-top: 400px" id="contact">
+      <hr>
+      <p>KONTAKT</p>
+    </div>
+  </section>
+
 </main>
 
 <footer>
