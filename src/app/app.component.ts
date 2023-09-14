@@ -12,6 +12,11 @@ export class AppComponent {
   isSticky = false;
   isLight = true;
 
+  firstName = "";
+  lastName = "";
+  email = "";
+  message = "";
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.isSmallNav = window.innerWidth < 800;
@@ -21,7 +26,6 @@ export class AppComponent {
   checkScroll() {
     const scrollPosition = window.pageYOffset;
 
-    // Überprüfen Sie die Scrollposition und passen Sie das Verhalten an
     if (scrollPosition >= 10) {
       this.isSticky = true;
       this.isLight = false;
@@ -30,5 +34,12 @@ export class AppComponent {
       this.isLight = true;
     }
   }
+
+  sendMessage(){
+    console.log(this.firstName, this.lastName, this.email, this.message)
+  }
+
 }
+
+
 

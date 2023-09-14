@@ -84,26 +84,26 @@
       <hr>
       <p style="font-weight: bold">KONTAKT</p>
       <p>Sie wollen weitere Informationen? Senden Sie uns gerne eine Nachricht über dieses Kontaktformular.</p>
-      <form>
+      <form id="input">
         <div class="row">
             <div class="col p-2">
-              <label for="firstname" class="form-label">Vorname</label>
-              <input type="text" class="form-control" id="firstname" placeholder="Vorname" name="firstname">
+              <label for="firstname" class="form-label">Vorname:</label>
+              <input [(ngModel)]="firstName" type="text" class="form-control" id="firstname" placeholder="Vorname" name="firstname">
             </div>
           <div class="col p-2">
               <label for="lastname" class="form-label">Nachname:</label>
-              <input type="text" class="form-control" id="lastname" placeholder="Nachname" name="lastname">
+              <input [(ngModel)]="lastName" type="text" class="form-control" id="lastname" placeholder="Nachname" name="lastname">
           </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+          <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="Email" name="email">
         </div>
         <div class="mb-3">
           <label for="message">Nachricht:</label>
-          <textarea class="form-control" rows="8" id="message" name="text"></textarea>
+          <textarea [(ngModel)]="message" class="form-control" rows="8" id="message" name="text"></textarea>
         </div>
-        <button type="submit" class="btn btn-secondary">Senden</button>
+        <button (click)="sendMessage()" type="submit" class="btn btn-secondary" id="submitBtn">Senden</button>
       </form>
     </div>
   </section>
