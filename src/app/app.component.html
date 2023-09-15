@@ -12,7 +12,7 @@
   <div class="container-fluid" style="height: 40px; display: flex">
     <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
     <p style="padding-top: 7px; margin-left: auto; margin-right: 10px">+491254644654</p>
-    <button type="button" class="btn btn-secondary" style="border-radius: 0">
+    <button type="button" class="btn btn-secondary" style="border-radius: 0; margin-right: 10px">
       <p>jetzt anrufen</p>
     </button>
   </div>
@@ -20,102 +20,121 @@
 
 <section style="background-image: url(assets/porsche.jpg); height: 920px; background-position: top">
 
-<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
-     *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">CarMatch</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">ÜBER UNS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">KONTAKT</a>
-        </li>
-      </ul>
+  <nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
+       *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CarMatch</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ÜBER UNS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">KONTAKT</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-transparent': isLight, 'navbar-dark bg-dark': !isLight}"
-     style="height: 90px" *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"
-     id="navbarNormal">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="assets/Color%20logo%20-%20no%20background.png" alt="logo" height="50px" width="200px"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarNormal">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarNormal">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">ÜBER UNS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">KONTAKT</a>
-        </li>
-      </ul>
+  <nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-transparent': isLight, 'navbar-dark bg-dark': !isLight}"
+       style="height: 90px" *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"
+       id="navbarNormal">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/Color%20logo%20-%20no%20background.png" alt="logo" height="50px"
+                                            width="200px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarNormal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarNormal">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ÜBER UNS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">KONTAKT</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
-
-  <div style="margin-top: 40px;" class="container-fluid" id="home">
+  <div style="margin-top: 80px;" class="container-fluid" id="home">
     <img class="img-fluid" src="assets/Color%20logo%20-%20no%20background.png" alt="auto">
   </div>
 
 </section>
 
-  <div class="container-fluid">
-  </div>
-  <section class="container-fluid">
-    <div style="display: flex; justify-content: center; margin-top: 40px" id="about">
-      <p style="font-weight: bold">ÜBER UNS</p>
+<section class="container-fluid" style="display: flex; justify-content: center">
+  <div class="row" id="about">
+    <div class="col-0" style="display: flex; justify-content: center">
+      <p style="font-weight: bold; font-size: xxx-large; margin-top: 40px">ÜBER UNS</p>
     </div>
-  </section>
-
-  <div class="container-fluid">
-    <hr>
+    <div class="col-0" style="display: flex; text-align: center">
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
   </div>
+</section>
 
-  <section class="container-fluid" style="display: flex; justify-content: center" >
-    <div id="contact">
-      <div style="display: flex; justify-content: center">
-        <p style="font-weight: bold">KONTAKT</p>
+<div class="container-fluid">
+  <hr>
+</div>
+
+<section class="container-fluid" style="display: flex; justify-content: center">
+  <div id="contact">
+    <div style="display: flex; justify-content: center">
+      <p style="font-weight: bold; font-size: xxx-large">KONTAKT</p>
+    </div>
+    <p style="font-weight: bold">Sie wollen weitere Informationen? Senden Sie uns gerne eine Nachricht über dieses
+      Kontaktformular.</p>
+    <form id="input">
+      <div class="row">
+        <div class="col p-2">
+          <label for="firstname" class="form-label"></label>
+          <input style="border: 1px solid black" [(ngModel)]="firstName" type="text" class="form-control" id="firstname"
+                 placeholder="Vorname" name="firstname">
+        </div>
+        <div class="col p-2">
+          <label for="lastname" class="form-label"></label>
+          <input style="border: 1px solid black" [(ngModel)]="lastName" type="text" class="form-control" id="lastname"
+                 placeholder="Nachname" name="lastname">
+        </div>
       </div>
-      <p>Sie wollen weitere Informationen? Senden Sie uns gerne eine Nachricht über dieses Kontaktformular.</p>
-      <form id="input">
-        <div class="row">
-            <div class="col p-2">
-              <label for="firstname" class="form-label">Vorname:</label>
-              <input [(ngModel)]="firstName" type="text" class="form-control" id="firstname" placeholder="Vorname" name="firstname">
-            </div>
-          <div class="col p-2">
-              <label for="lastname" class="form-label">Nachname:</label>
-              <input [(ngModel)]="lastName" type="text" class="form-control" id="lastname" placeholder="Nachname" name="lastname">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email:</label>
-          <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="Email" name="email">
-        </div>
-        <div class="mb-3">
-          <label for="message">Nachricht:</label>
-          <textarea [(ngModel)]="message" class="form-control" rows="8" id="message" name="text"></textarea>
-        </div>
-        <button (click)="sendMessage()" type="submit" class="btn btn-secondary" id="submitBtn">Senden</button>
-      </form>
-    </div>
-  </section>
+      <div class="mb-3">
+        <label for="email" class="form-label"></label>
+        <input style="border: 1px solid black" [(ngModel)]="email" type="email" class="form-control" id="email"
+               placeholder="Email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="message"></label>
+        <textarea style="border: 1px solid black" [(ngModel)]="message" class="form-control" rows="8" id="message"
+                  name="text" placeholder="Nachricht"></textarea>
+      </div>
+      <button (click)="sendMessage()" type="submit" class="btn btn-secondary" id="submitBtn">Senden</button>
+    </form>
+  </div>
+</section>
 
 
 <footer>
