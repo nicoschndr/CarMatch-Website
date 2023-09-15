@@ -18,6 +18,8 @@
   </div>
 </header>
 
+<section style="background-image: url(assets/porsche.jpg); height: 920px; background-position: top">
+
 <nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
      *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
   <div class="container-fluid">
@@ -41,7 +43,7 @@
   </div>
 </nav>
 
-<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
+<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-transparent': isLight, 'navbar-dark bg-dark': !isLight}"
      style="height: 90px" *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"
      id="navbarNormal">
   <div class="container-fluid">
@@ -65,17 +67,18 @@
   </div>
 </nav>
 
-<main>
 
-  <div style="margin-top: 40px" class="container-fluid" id="home">
+
+  <div style="margin-top: 40px;" class="container-fluid" id="home">
     <img class="img-fluid" src="assets/Color%20logo%20-%20no%20background.png" alt="auto">
   </div>
 
+</section>
+
   <div class="container-fluid">
-    <hr>
   </div>
   <section class="container-fluid">
-    <div style="display: flex; justify-content: center" id="about">
+    <div style="display: flex; justify-content: center; margin-top: 40px" id="about">
       <p style="font-weight: bold">ÜBER UNS</p>
     </div>
   </section>
@@ -114,7 +117,6 @@
     </div>
   </section>
 
-</main>
 
 <footer>
 
