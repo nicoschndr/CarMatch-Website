@@ -3,25 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>CarMatch Website</title>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
 
 
-<header style="background-color: rgb(30, 34, 38); color: white">
-  <div class="container-fluid" style="height: 40px; display: flex">
-    <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
-    <p style="padding-top: 7px; margin-left: auto; margin-right: 10px">+491254644654</p>
-    <button type="button" class="btn btn-secondary" style="border-radius: 0; margin-right: 10px">
+<header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1">
+  <div *ngIf="!isSmallNav" class="container-fluid" style="height: 40px; display: flex">
+    <p *ngIf="!isSmallNav" style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
+    <p *ngIf="isSmallNav" style="padding-top: 7px; font-size: xx-small">CarMatch, Beispielstraße, Beispielort</p>
+    <p *ngIf="!isSmallNav" style="padding-top: 7px; margin-left: auto; margin-right: 10px">+491254644654</p>
+    <p *ngIf="isSmallNav" style="padding-top: 7px; margin-left: auto; margin-right: 10px; font-size: xx-small">+491254644654</p>
+    <button *ngIf="!isSmallNav" type="button" class="btn btn-secondary" style="border-radius: 0; margin-right: 8px">
       <p>jetzt anrufen</p>
+    </button>
+    <button *ngIf="isSmallNav" type="button" class="btn btn-secondary" style="border-radius: 0; margin-right: 8px; font-size: xx-small">
+      <p>jetzt anrufen</p>
+    </button>
+  </div>
+
+  <div *ngIf="isSmallNav" class="container-fluid" style="height: 20px; display: flex">
+    <p *ngIf="!isSmallNav" style="padding-top: 3px">CarMatch, Beispielstraße, Beispielort</p>
+    <p *ngIf="isSmallNav" style="padding-top: 3px; font-size: xx-small">CarMatch, Beispielstraße, Beispielort</p>
+    <p *ngIf="!isSmallNav" style="padding-top: 3px; margin-left: auto; margin-right: 10px">+491254644654</p>
+    <p *ngIf="isSmallNav" style="padding-top: 3px; margin-left: auto; margin-right: 10px; font-size: xx-small">+491254644654</p>
+    <button *ngIf="!isSmallNav" type="button" class="btn btn-secondary" style="border-radius: 0; margin-right: 8px">
+      <p>jetzt anrufen</p>
+    </button>
+    <button *ngIf="isSmallNav" type="button" class="btn btn-secondary btn-sm" style="border-radius: 0; margin-right: 1px; font-size: xx-small;">
+      <p style="position: relative; top: -2px">jetzt anrufen</p>
     </button>
   </div>
 </header>
 
-<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-light': isLight, 'navbar-dark bg-dark': !isLight}"
+<nav [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-transparent': isLight, 'navbar-dark bg-dark': !isLight}"
      *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">CarMatch</a>
+    <a class="navbar-brand" href="#"><img src="assets/Color%20logo%20-%20no%20background.png" alt="logo" height="50px"
+      width="200px"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
       <span class="navbar-toggler-icon"></span>
     </button>
