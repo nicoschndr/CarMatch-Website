@@ -74,12 +74,14 @@
 
 </section>
 
-<section class="container-fluid" style="display: flex; justify-content: center" id="about">
+<section class="container-fluid text-center" id="about">
   <div class="row">
-    <div class="col-0" style="display: flex; justify-content: center">
+    <div class="col">
       <p style="font-weight: bold; font-size: xxx-large; margin-top: 40px">ÜBER UNS</p>
     </div>
-    <div class="col-0" style="display: flex; text-align: center">
+  </div>
+  <div class="row">
+    <div class="col">
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -93,11 +95,11 @@
         ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
         rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
-    <div class="col-0" style="display: flex; justify-content: center">
-      <img style="margin-right: 70px" src="assets/daniel.jpeg" alt="daniel" width="270px" height="400px">
-      <img style="margin-left: 70px" src="assets/nico.jpeg" alt="nico" width="270px" height="400px">
-    </div>
   </div>
+    <div class="row" style="display: flex; justify-content: center">
+      <img class="col p-5 col-md-2"  src="assets/daniel.jpeg" alt="daniel">
+      <img class="col p-5 col-md-2"  src="assets/nico.jpeg" alt="nico">
+    </div>
 </section>
 
 <div class="container-fluid">
@@ -113,12 +115,12 @@
       Kontaktformular.</p>
     <form id="input">
       <div class="row">
-        <div class="col p-2">
+        <div class="col">
           <label for="firstname" class="form-label"></label>
           <input style="border: 1px solid black" [(ngModel)]="firstName" type="text" class="form-control" id="firstname"
                  placeholder="Vorname" name="firstname">
         </div>
-        <div class="col p-2">
+        <div class="col">
           <label for="lastname" class="form-label"></label>
           <input style="border: 1px solid black" [(ngModel)]="lastName" type="text" class="form-control" id="lastname"
                  placeholder="Nachname" name="lastname">
