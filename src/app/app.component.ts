@@ -16,6 +16,8 @@ export class AppComponent implements OnInit{
   email = "";
   message = "";
 
+  currentLanguage = "";
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.isSmallNav = window.innerWidth < 800;
@@ -41,6 +43,9 @@ export class AppComponent implements OnInit{
     this.isSmallNav = window.innerWidth < 800;
   }
 
+  setCurrentLanguage(language: string){
+    this.currentLanguage = language;
+  }
 }
 
 
