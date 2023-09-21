@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   email = "";
   message = "";
 
-  currentLanguage = "";
+  currentLanguage = "deutsch";
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -41,10 +41,12 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.isSmallNav = window.innerWidth < 800;
+    this.currentLanguage = localStorage.getItem('language')!
   }
 
   setCurrentLanguage(language: string){
     this.currentLanguage = language;
+    localStorage.setItem('language', language)
   }
 }
 
