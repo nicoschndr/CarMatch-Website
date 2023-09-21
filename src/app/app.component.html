@@ -46,16 +46,16 @@
       </svg>
       +491254644654
     </a>
-    <p [(ngModel)]="currentLanguage" style="padding-top: 3px; padding-left: 5px; font-size: xx-small; cursor: pointer" data-bs-toggle="dropdown" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+    <p style="padding-top: 3px; padding-left: 5px; font-size: xx-small; cursor: pointer" data-bs-toggle="dropdown" aria-expanded="false">
+      {{currentLanguage || "Deutsch"}}<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
       <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
     </svg>
     </p>
     <ul class="dropdown-menu dropdown-menu-dark">
-      <li><a (click)="setCurrentLanguage('german')" class="dropdown-item" href="#">Deutsch</a></li>
-      <li><a (click)="currentLanguage = 'english'" class="dropdown-item" href="#">Englisch</a></li>
-      <li><a (click)="currentLanguage = 'georgian'" class="dropdown-item" href="#">Georgisch</a></li>
-      <li><a (click)="currentLanguage = 'russian'" class="dropdown-item" href="#">Russisch</a></li>
+      <li><a (click)="setCurrentLanguage('Deutsch')" class="dropdown-item" href="#">Deutsch</a></li>
+      <li><a (click)="setCurrentLanguage('English')"  class="dropdown-item" href="#">Englisch</a></li>
+      <li><a (click)="setCurrentLanguage('Georgisch')" class="dropdown-item" href="#">Georgisch</a></li>
+      <li><a (click)="setCurrentLanguage('Russisch')" class="dropdown-item" href="#">Russisch</a></li>
     </ul>
   </div>
 </header>
