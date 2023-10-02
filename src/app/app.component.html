@@ -8,7 +8,7 @@
 <body data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
 
 
-<header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1">
+<header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1" id="home">
   <div *ngIf="!isSmallNav" class="container-fluid" style="height: 40px; display: flex">
     <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
     <a class="nav-link" href="tel:00495656465" *ngIf="!isSmallNav"
@@ -22,7 +22,7 @@
       +491254644654
     </a>
     <p style="padding-top: 7px; cursor: pointer" data-bs-toggle="dropdown" aria-expanded="false">
-      {{currentLanguage || "Deutsch"}}
+      {{currentLanguage || "German"}}
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
            viewBox="0 0 16 16">
         <path
@@ -30,10 +30,10 @@
       </svg>
     </p>
     <ul class="dropdown-menu dropdown-menu-dark">
-      <li><a (click)="setCurrentLanguage('Deutsch')" class="dropdown-item" href="#">Deutsch</a></li>
-      <li><a (click)="setCurrentLanguage('English')" class="dropdown-item" href="#">Englisch</a></li>
-      <li><a (click)="setCurrentLanguage('Georgisch')" class="dropdown-item" href="#">Georgisch</a></li>
-      <li><a (click)="setCurrentLanguage('Russisch')" class="dropdown-item" href="#">Russisch</a></li>
+      <li><a (click)="setCurrentLanguage('German')" class="dropdown-item" href="#">German</a></li>
+      <li><a (click)="setCurrentLanguage('English')" class="dropdown-item" href="#">English</a></li>
+      <li><a (click)="setCurrentLanguage('Georgian')" class="dropdown-item" href="#">Georgian</a></li>
+      <li><a (click)="setCurrentLanguage('Russian')" class="dropdown-item" href="#">Russian</a></li>
     </ul>
   </div>
 
@@ -51,7 +51,7 @@
     </a>
     <p style="padding-top: 3px; padding-left: 5px; font-size: xx-small; cursor: pointer" data-bs-toggle="dropdown"
        aria-expanded="false">
-      {{currentLanguage || "Deutsch"}}
+      {{currentLanguage || "German"}}
       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-caret-down-fill"
            viewBox="0 0 16 16">
         <path
@@ -59,10 +59,10 @@
       </svg>
     </p>
     <ul class="dropdown-menu dropdown-menu-dark">
-      <li><a (click)="setCurrentLanguage('Deutsch')" class="dropdown-item" href="#">Deutsch</a></li>
-      <li><a (click)="setCurrentLanguage('English')" class="dropdown-item" href="#">Englisch</a></li>
-      <li><a (click)="setCurrentLanguage('Georgisch')" class="dropdown-item" href="#">Georgisch</a></li>
-      <li><a (click)="setCurrentLanguage('Russisch')" class="dropdown-item" href="#">Russisch</a></li>
+      <li><a (click)="setCurrentLanguage('German')" class="dropdown-item" href="#">German</a></li>
+      <li><a (click)="setCurrentLanguage('English')" class="dropdown-item" href="#">English</a></li>
+      <li><a (click)="setCurrentLanguage('Georgian')" class="dropdown-item" href="#">Georgian</a></li>
+      <li><a (click)="setCurrentLanguage('Russian')" class="dropdown-item" href="#">Russian</a></li>
     </ul>
   </div>
 </header>
@@ -118,14 +118,14 @@
 </nav>
 
 <section style="background-image: url(assets/porsche.jpg); height: 920px; background-position: top">
-
-  <div style="margin-top: -90px" class="container-fluid" id="home">
+  <div style="margin-top: -90px" class="container-fluid">
     <img style="margin-top: 200px" class="img-fluid" src="assets/Color%20logo%20-%20no%20background.png" alt="auto">
   </div>
-
 </section>
 
-<section class="container-fluid text-center" id="about">
+<div style="position: relative; top:-60px" id="about"></div>
+
+<section class="container-fluid text-center">
   <div class="row">
     <div class="col">
       <p style="font-weight: bold; font-size: xxx-large; margin-top: 40px">ÜBER UNS</p>
@@ -228,11 +228,11 @@
   </div>
 </section>
 
-<div class="container-fluid">
+<div class="container-fluid" id="contact">
   <hr>
 </div>
 
-<section class="container-fluid" style="display: flex; justify-content: center" id="contact">
+<section class="container-fluid" style="display: flex; justify-content: center">
   <div>
     <div style="display: flex; justify-content: center">
       <p style="font-weight: bold; font-size: xxx-large">KONTAKT</p>
@@ -269,7 +269,7 @@
 
 
 <footer style="margin-top: 40px">
-  <div class="container-fluid text-center bg-dark">
+  <div style="height: 90px" class="container-fluid text-center bg-dark">
     <div class="row">
       <div class="col">
         <p style="color: white">
