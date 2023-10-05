@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {FormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     NgOptimizedImage,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{provide: Window, useValue: window}],
   bootstrap: [AppComponent]
