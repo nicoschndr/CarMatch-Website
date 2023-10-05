@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(cors({origin: "*"}))
@@ -10,9 +11,11 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res) => {
+app.use(express.static(path.join(__dirname, 'dist/car-match-website')));
+
+app.get("*", (req, res) => {
   res.status(200);
-  res.send("<h1>hi</h1>")
+  res.sendFile(path.join(__dirname, 'dist/car-match-website/index.html'));
 })
 app.post('/send-email', (req, res) => {
   const {firstName, lastName, email, message} = req.body;
