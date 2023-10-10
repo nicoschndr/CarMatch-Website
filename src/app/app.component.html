@@ -11,8 +11,10 @@
 <header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1" id="home">
   <div *ngIf="!isSmallNav" class="container-fluid" style="height: 40px; display: flex">
     <a class="nav-link" style="padding-top: 7px" href="mailto:nicoschneider9809@gmail.com">
-      <svg style="width: 16px; height: 16px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      <svg style="width: 16px; height: 16px" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+           fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
       </svg>
       nicoschneider9809@gmail.com
     </a>
@@ -45,8 +47,10 @@
 
   <div *ngIf="isSmallNav" class="container-fluid" style="height: 20px; display: flex">
     <a class="nav-link" style="font-size: xx-small; padding-top: 3px" href="mailto:nicoschneider9809@gmail.com">
-      <svg style="width: 8px; height: 8px" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      <svg style="width: 8px; height: 8px" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
+           class="bi bi-envelope" viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
       </svg>
       nicoschneider9809@gmail.com
     </a>
@@ -83,7 +87,8 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="assets/Color%20logo%20-%20no%20background.png" alt="logo" height="50px"
                                           width="200px"></a>
-    <button (click)="setScrollOffset()"  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
+    <button (click)="setScrollOffset()" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbarSmall">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">
@@ -136,7 +141,7 @@
 
 <div style="position: relative; top:-60px" id="about"></div>
 
-<section class="container-fluid text-center">
+<section class="container-fluid">
   <div class="row">
     <div class="col">
       <p style="font-weight: bold; font-size: xxx-large; margin-top: 40px">ÜBER UNS</p>
@@ -144,66 +149,81 @@
   </div>
   <div class="row">
     <div class="col">
-      <p style="font-weight: bold">
-        Willkommen bei Carmatch - Ihrem zuverlässigen Partner für den Kauf von Gebrauchtwagen!
-      </p>
+      <p style="font-weight: bold; font-size: x-large">Das Unternehmen</p>
     </div>
-    <div class="row">
-      <div class="col">
-        <p>Bei Carmatch verstehen wir, dass der Kauf eines Gebrauchtwagens eine wichtige Entscheidung ist, die
-          sorgfältige
-          Überlegungen erfordert. Deshalb haben wir es uns zur Aufgabe gemacht, Ihnen dabei zu helfen, das perfekte Auto
-          zu finden - eines, das genau zu Ihren Bedürfnissen, Ihrem Stil und Ihrem Budget passt.</p>
+  </div>
+  <div class="row">
+    <div class="col">
+
+
+      <div class="row">
+        <div class="col">
+          <p style="font-weight: bold">
+            Willkommen bei Carmatch - Ihrem zuverlässigen Partner für den Kauf von Gebrauchtwagen!
+          </p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Bei Carmatch verstehen wir, dass der Kauf eines Gebrauchtwagens eine wichtige Entscheidung ist, die
+              sorgfältige
+              Überlegungen erfordert. Deshalb haben wir es uns zur Aufgabe gemacht, Ihnen dabei zu helfen, das perfekte
+              Auto
+              zu finden - eines, das genau zu Ihren Bedürfnissen, Ihrem Stil und Ihrem Budget passt.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>
+              Wir haben eine umfangreiche Auswahl an qualitätsgeprüften Gebrauchtwagen verschiedener Marken und Modelle,
+              die
+              sorgfältig ausgewählt wurden, um sicherzustellen, dass sie den höchsten Standards entsprechen. Jedes
+              Fahrzeug
+              wird einer gründlichen Inspektion unterzogen, um sicherzustellen, dass es in einwandfreiem Zustand ist und
+              Ihnen
+              jahrelange Freude bereiten wird.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>
+              Was uns von anderen Gebrauchtwagenhändlern unterscheidet, ist unser einzigartiger Matching-Ansatz. Wir
+              glauben,
+              dass das Finden des richtigen Autos mehr ist als nur die passende Marke und das passende Modell. Es geht
+              darum,
+              Ihren individuellen Bedürfnissen gerecht zu werden und ein Auto zu finden, das perfekt zu Ihrem Lebensstil
+              und
+              Ihren Anforderungen passt.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>
+              Unser Team nimmt sich die Zeit, Ihre Präferenzen und Anforderungen genau zu verstehen. Wir berücksichtigen
+              Ihre
+              finanziellen Möglichkeiten, Ihre Fahrgewohnheiten, Ihre bevorzugten Funktionen und vieles mehr.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>
+              Wir nehmen Ihnen die lästige Suche ab und präsentieren Ihnen eine Auswahl an Autos, die perfekt zu Ihnen
+              passen.
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="col">
+      <img style="border-radius: 20px;" src="assets/company.jpg" alt="company" width="800px" height="400px">
     </div>
     <div class="row">
       <div class="col">
         <p>
-          Wir haben eine umfangreiche Auswahl an qualitätsgeprüften Gebrauchtwagen verschiedener Marken und Modelle, die
-          sorgfältig ausgewählt wurden, um sicherzustellen, dass sie den höchsten Standards entsprechen. Jedes Fahrzeug
-          wird einer gründlichen Inspektion unterzogen, um sicherzustellen, dass es in einwandfreiem Zustand ist und
-          Ihnen
-          jahrelange Freude bereiten wird.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p>
-          Was uns von anderen Gebrauchtwagenhändlern unterscheidet, ist unser einzigartiger Matching-Ansatz. Wir
-          glauben,
-          dass das Finden des richtigen Autos mehr ist als nur die passende Marke und das passende Modell. Es geht
-          darum,
-          Ihren individuellen Bedürfnissen gerecht zu werden und ein Auto zu finden, das perfekt zu Ihrem Lebensstil und
-          Ihren Anforderungen passt.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p>
-          Unser Team nimmt sich die Zeit, Ihre Präferenzen und Anforderungen genau zu verstehen. Wir berücksichtigen
-          Ihre
-          finanziellen Möglichkeiten, Ihre Fahrgewohnheiten, Ihre bevorzugten Funktionen und vieles mehr.
-        </p>
-      </div>
-    </div>
-    <div class="row" style="display: flex; justify-content: center">
-      <img class="col p-5 col-md-2" src="assets/daniel.jpeg" alt="daniel">
-      <img class="col p-5 col-md-2" src="assets/nico.jpeg" alt="nico">
-    </div>
-    <div class="row">
-      <div class="col">
-        <p>
-          Wir nehmen Ihnen die lästige Suche ab und präsentieren Ihnen eine Auswahl an Autos, die perfekt zu Ihnen
-          passen.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p>
-          Bei Carmatch möchten wir, dass Ihr Autokauf eine positive und stressfreie Erfahrung ist. Deshalb bieten wir
+          Bei Carmatch möchten wir, dass Ihr Autokauf eine positive und stressfreie Erfahrung ist. Deshalb bieten
+          wir
           Ihnen nicht nur eine umfangreiche Fahrzeugauswahl und eine individuelle Beratung, sondern auch eine
           transparente
           Preisgestaltung und, die zu Ihnen passt. Unser Ziel ist es, Ihnen das Vertrauen zu geben, dass Sie das
@@ -215,7 +235,8 @@
       <div class="col">
         <p>
           Entdecken Sie noch heute die Vielfalt an Gebrauchtwagen bei Carmatch und lassen Sie uns Ihnen helfen, das
-          perfekte Auto zu finden. Kontaktieren Sie unser Team oder besuchen Sie unsere Website, um mehr zu erfahren.
+          perfekte Auto zu finden. Kontaktieren Sie unser Team oder besuchen Sie unsere Website, um mehr zu
+          erfahren.
           Wir
           freuen uns darauf, Sie auf Ihrer Reise zu begleiten.
         </p>
@@ -224,19 +245,53 @@
     <div class="row">
       <div class="col">
         <p>
-          Hol dir die Freiheit auf vier Rädern mit unserem Autoexport- und Importservice! Wir machen es einfach, dein
-          Traumauto aus dem Ausland zu bekommen oder dein Fahrzeug in andere Länder zu verkaufen. Unser erfahrenes Team
-          kümmert sich um den gesamten Prozess, von der Beschaffung und Inspektion bis hin zum sicheren Transport. Mit
+          Hol dir die Freiheit auf vier Rädern mit unserem Autoexport- und Importservice! Wir machen es einfach,
+          dein
+          Traumauto aus dem Ausland zu bekommen oder dein Fahrzeug in andere Länder zu verkaufen. Unser erfahrenes
+          Team
+          kümmert sich um den gesamten Prozess, von der Beschaffung und Inspektion bis hin zum sicheren Transport.
+          Mit
           uns
           kannst du die Vielfalt der Automobilwelt entdecken und von den besten Angeboten profitieren. Vertraue auf
           unsere
-          Expertise und lass uns gemeinsam deine automobilen Träume verwirklichen. Kontaktiere uns noch heute und starte
+          Expertise und lass uns gemeinsam deine automobilen Träume verwirklichen. Kontaktiere uns noch heute und
+          starte
           dein Abenteuer auf den Straßen der Welt!
         </p>
       </div>
     </div>
-
   </div>
+
+
+  <div class="row">
+    <div class="col">
+      <p style="font-weight: bold; font-size: x-large">Das Team</p>
+    </div>
+  </div>
+  <div class="row" style="display: flex; justify-content: center">
+    <div class="col p-5 col-md-2">
+      <div class="card">
+        <img src="assets/daniel.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Daniel Berger</b></h4>
+          <p>Founder</p>
+        </div>
+      </div>
+    </div>
+    <div class="col p-5 col-md-2">
+      <div class="card">
+        <img src="assets/nico.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Nico Schneider</b></h4>
+          <p>Webdeveloper</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 </section>
 
 <div class="container-fluid" id="contact">
@@ -258,10 +313,13 @@
     </div>
     <div class="col text-center">
       <p style="font-weight: bold">Noch Fragen?</p>
-      <svg style="width: 100px; height: 100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      <svg style="width: 100px; height: 100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+           fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
       </svg>
-      <svg style="width: 100px; height: 100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+      <svg style="width: 100px; height: 100px" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+           fill="currentColor"
            class="bi bi-instagram" viewBox="0 0 16 16">
         <path
           d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
