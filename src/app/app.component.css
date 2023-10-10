@@ -4,4 +4,7 @@ input{
 textarea{
   background-color: lightcyan;
 }
+p{
+  text-align: justify;
+}
 
