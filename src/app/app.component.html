@@ -10,13 +10,13 @@
 
 <header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1" id="home">
   <div *ngIf="!isSmallNav" class="container-fluid" style="height: 40px; display: flex">
-    <p style="padding-top: 7px">CarMatch, Beispielstraße, Beispielort</p>
-    <a class="nav-link" style="padding-top: 7px; margin-left: auto" href="mailto:nicoschneider9809@gmail.com">
-    <svg style="width: 16px; height: 16px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-    </svg>
+    <a class="nav-link" style="padding-top: 7px" href="mailto:nicoschneider9809@gmail.com">
+      <svg style="width: 16px; height: 16px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      </svg>
       nicoschneider9809@gmail.com
     </a>
+    <p style="padding-top: 7px; margin-left: auto">CarMatch, Beispielstraße, Beispielort</p>
     <a class="nav-link" href="tel:00495656465" *ngIf="!isSmallNav"
        style="padding-top: 7px; margin-left: auto; margin-right: 10px">
       <svg style="margin-right: 5px; margin-bottom: 3px" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -44,7 +44,12 @@
   </div>
 
   <div *ngIf="isSmallNav" class="container-fluid" style="height: 20px; display: flex">
-    <p style="padding-top: 3px; font-size: xx-small">CarMatch, Beispielstraße, Beispielort</p>
+    <a class="nav-link" style="font-size: xx-small; padding-top: 3px" href="mailto:nicoschneider9809@gmail.com">
+      <svg style="width: 8px; height: 8px" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      </svg>
+      nicoschneider9809@gmail.com
+    </a>
     <a class="nav-link" href="tel:00495656465" *ngIf="isSmallNav"
        style="padding-top: 3px; margin-left: auto; font-size: xx-small">
       <svg style="margin-right: 3px; margin-bottom: 1px" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
@@ -78,7 +83,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="assets/Color%20logo%20-%20no%20background.png" alt="logo" height="50px"
                                           width="200px"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
+    <button (click)="setScrollOffset()"  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarSmall">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbarSmall">

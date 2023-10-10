@@ -48,6 +48,14 @@ export class AppComponent implements OnInit{
     this.currentLanguage = language;
     localStorage.setItem('language', language)
   }
+
+  setScrollOffset() {
+    if (this.isLight && !this.isSticky){
+      this.isLight = false
+    } else if(!this.isLight && !this.isSticky) {
+      this.isLight = true
+    }
+  }
 }
 
 
