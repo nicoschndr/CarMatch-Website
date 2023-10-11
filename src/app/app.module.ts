@@ -7,16 +7,22 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 
 import { RouterModule, Routes } from "@angular/router";
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'data-protection', component: DataProtectionComponent },
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ImprintComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,
