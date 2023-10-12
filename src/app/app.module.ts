@@ -9,12 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from "@angular/router";
 import { ImprintComponent } from './imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-protection', component: DataProtectionComponent },
+  { path: 'about', component: AboutComponent}
 ]
 
 @NgModule({
@@ -22,7 +26,10 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     ImprintComponent,
-    DataProtectionComponent
+    DataProtectionComponent,
+    AboutComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {AboutComponent} from "../about/about.component";
+import {ContactComponent} from "../contact/contact.component";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -7,14 +10,10 @@ import {Component, HostListener, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'CarMatch-Website';
+
   isSmallNav = false;
   isSticky = false;
   isLight = true;
-
-  firstName = "";
-  lastName = "";
-  email = "";
-  message = "";
 
   currentLanguage = "deutsch";
 
@@ -36,25 +35,44 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  sendMessage() {
-    console.log(this.firstName, this.lastName, this.email, this.message)
-  }
-
-  ngOnInit(): void {
-    this.isSmallNav = window.innerWidth < 800;
-    this.currentLanguage = localStorage.getItem('language')!
-  }
-
   setCurrentLanguage(language: string) {
     this.currentLanguage = language;
     localStorage.setItem('language', language)
   }
 
-  setScrollOffset() {
-    if (this.isLight && !this.isSticky) {
-      this.isLight = false
-    } else if (!this.isLight && !this.isSticky) {
-      this.isLight = true
+  @ViewChild('home') scrollTargetHome: ElementRef;
+  @ViewChild('about') scrollTargetAbout: ElementRef;
+  @ViewChild('contact') scrollTargetContact: ElementRef;
+
+  scrollToElement(element: string) {
+    if (element === "home") {
+      const targetElement = this.scrollTargetHome.nativeElement;
+      targetElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'})
     }
+    if (element === "about") {
+      const targetElement = this.scrollTargetAbout.nativeElement;
+      if (!this.isSmallNav) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 90
+        window.scrollTo({top: targetPosition, behavior: 'smooth'})
+      } else {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 150
+        window.scrollTo({top: targetPosition, behavior: 'smooth'})
+      }
+    }
+    if (element === "contact") {
+      const targetElement = this.scrollTargetContact.nativeElement;
+      if (!this.isSmallNav) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 90
+        window.scrollTo({top: targetPosition, behavior: 'smooth'})
+      } else {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 180
+        window.scrollTo({top: targetPosition, behavior: 'smooth'})
+      }
+    }
+  }
+
+  ngOnInit() {
+    this.isSmallNav = window.innerWidth < 800;
+    this.currentLanguage = localStorage.getItem('language')!
   }
 }
