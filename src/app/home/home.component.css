@@ -1,0 +1,12 @@
+input{
+  background-color: lightcyan;
+}
+textarea{
+  background-color: lightcyan;
+}
+p{
+  text-align: justify;
+}
+a{
+  cursor: pointer;
+}
