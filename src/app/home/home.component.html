@@ -1,5 +1,4 @@
 <body data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
-
 <header style="background-color: rgb(30, 34, 38); color: white; position: relative; z-index: 1" #home>
   <div *ngIf="!isSmallNav" class="container-fluid" style="height: 40px; display: flex">
     <a class="nav-link" style="padding-top: 7px" href="mailto:nicoschneider9809@gmail.com">
@@ -36,7 +35,6 @@
       <li><a (click)="setCurrentLanguage('Russian')" class="dropdown-item" href="#">Russian</a></li>
     </ul>
   </div>
-
   <div *ngIf="isSmallNav" class="container-fluid" style="height: 20px; display: flex">
     <a class="nav-link" style="font-size: xx-small; padding-top: 3px" href="mailto:nicoschneider9809@gmail.com">
       <svg style="width: 8px; height: 8px" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor"
@@ -73,7 +71,6 @@
     </ul>
   </div>
 </header>
-
 <nav [ngClass]="{'sticky-top': isSticky}"
      *ngIf="isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbarSmall">
   <div class="container-fluid">
@@ -98,7 +95,6 @@
     </div>
   </div>
 </nav>
-
 <nav style="height: 90px; background-position: top;"
      [ngClass]="{'sticky-top': isSticky, 'navbar-light bg-transparent': isLight, 'navbar-dark bg-dark': !isLight}"
      *ngIf="!isSmallNav" class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark"
@@ -124,25 +120,19 @@
     </div>
   </div>
 </nav>
-
 <section style="background-image: url(assets/porsche.jpg); background-position: top; height: 100vh">
   <div style="margin-top: -90px" class="container-fluid">
     <img style="margin-top: 200px" class="img-fluid" src="assets/Color%20logo%20-%20no%20background.png" alt="auto">
   </div>
 </section>
-
 <div #about>
   <app-about></app-about>
 </div>
-
 <div style="max-width: 1400px;" class="container-fluid">
   <hr>
 </div>
 <div #contact>
   <app-contact></app-contact>
 </div>
-
 <app-footer></app-footer>
-
-
 </body>
