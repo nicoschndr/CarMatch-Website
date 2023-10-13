@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
-    this.isSmallNav = window.innerWidth < 800;
+    this.isSmallNav = window.innerWidth < 1000;
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -74,5 +74,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.isSmallNav = window.innerWidth < 800;
     this.currentLanguage = localStorage.getItem('language')!
+    this.isSmallNav = window.innerWidth < 1000;
   }
 }
